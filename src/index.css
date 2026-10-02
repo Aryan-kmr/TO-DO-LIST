@@ -1,0 +1,401 @@
+
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+
+/* Main App */
+
+.app {
+  min-height: 100vh;
+  padding: 30px 15px;
+  background-color: rgb(131, 98, 98);
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+}
+
+
+/* Header */
+
+.header {
+  background-color: rgb(252, 217, 217);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+.theme-btn {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+/* Task Form */
+
+.task-form {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input-row button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.input-row button:hover {
+  background-color: #555;
+}
+
+.options-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.options-row select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+/* Progress */
+
+.progress-tracker {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-tracker h3 {
+  margin-top: 0;
+}
+
+.progress-tracker p {
+  color: #666;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+
+
+/* Task List */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* Task Card */
+
+.task-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.task-card:hover {
+  border-color: #aaa;
+}
+
+.task-card.completed {
+  background-color: #f1f1f1;
+}
+
+
+/* Task Information */
+
+.task-info {
+  flex: 1;
+}
+
+.task-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.task-card.completed .task-name span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+/* Task Details */
+
+.task-details {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+
+/* Buttons */
+
+#btn {
+  background-color: blue;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.task-buttons button {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-buttons button:hover {
+  background-color: #eee;
+}
+
+.task-buttons .delete-btn {
+  color: red;
+}
+
+
+/* Empty Box */
+
+.empty-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+}
+
+.empty-box p {
+  color: #777;
+}
+
+
+/* Edit Box */
+
+.edit-box {
+  width: 100%;
+}
+
+.edit-box > input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.edit-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-options select {
+  flex: 1;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.edit-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.save-btn {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #eee !important;
+}
+
+
+/* Clear All */
+
+.clear-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: #ffe5e5;
+}
+
+
+/* Dark Mode */
+
+.app.dark {
+  background-color: #222;
+  color: white;
+}
+
+.dark .header,
+.dark .task-form,
+.dark .progress-tracker,
+.dark .task-card,
+.dark .empty-box {
+  background-color: #333;
+  border-color: #555;
+}
+
+.dark .header p,
+.dark .progress-tracker p,
+.dark .task-details {
+  color: #bbb;
+}
+
+.dark .theme-btn {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark input,
+.dark select {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark .input-row button {
+  background-color: #555;
+}
+
+.dark .task-buttons button {
+  background-color: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark .task-card.completed {
+  background-color: #292929;
+}
+
+.dark .clear-btn {
+  background-color: #333;
+  border-color: #666;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .options-row {
+    flex-direction: column;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-buttons {
+    justify-content: flex-end;
+    margin-top: 12px;
+  }
+
+  .edit-options {
+    flex-direction: column;
+  }
+
+}
